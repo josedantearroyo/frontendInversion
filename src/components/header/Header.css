@@ -1,0 +1,65 @@
+/* Estilos para la implementación personalizada */
+.custom-menubar {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--surface-card, white);
+    border-bottom: 1px solid var(--surface-border, #dee2e6);
+    width: 100%;
+}
+
+.menubar-start, .menubar-end {
+    flex: 0 0 auto;
+}
+
+.menubar-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-items {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-item {
+    margin: 0 0.5rem;
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.25rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.menu-link:hover {
+    background-color: var(--surface-hover, #f8f9fa);
+}
+
+.menu-text {
+    margin-left: 0.5rem;
+}
+
+/* Estilos para el enfoque con Menubar de PrimeReact */
+.p-menubar-custom {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.p-menubar-custom .p-menubar-root-list {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.p-menubar-custom .p-menubar-end {
+    margin-left: auto;
+}
