@@ -40,7 +40,7 @@ const Header = () => {
         label="Ingresar"
         className="p-button-md md:p-button-sm"
         icon="pi pi-user"
-        severity="warning"
+        severity="secondary"
         onClick={() => navigate("/login")}
       />
     </div>
