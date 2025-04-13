@@ -39,8 +39,8 @@ Sigue estos pasos para ejecutar la aplicación en un entorno local de desarrollo
 Abre tu terminal y ejecuta:
 
 ```
-git clone https://github.com/josedantearroyo/inversionCripto.git
-cd inversionCripto
+git clone https://github.com/josedantearroyo/frontendInversion.git
+cd frontendInversion
 ```
 
 ### 2. Instala las dependencias
