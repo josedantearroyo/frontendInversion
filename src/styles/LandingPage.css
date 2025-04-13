@@ -1,0 +1,108 @@
+/* Estilos para animaciones y efectos de la landing page */
+
+/* Efecto de parallax para imágenes */
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.3s ease;
+}
+
+/* Efectos de hover para elementos interactivos */
+.hover-grow {
+  transition: transform 0.3s ease;
+}
+
+.hover-grow:hover {
+  transform: scale(1.03);
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Efecto para secciones cuando aparecen */
+[data-aos] {
+  opacity: 0;
+  transition-property: opacity, transform;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
+/* Mejoras específicas para la landing page */
+.landing-container {
+  overflow-x: hidden;
+}
+
+.hero-section {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Gradient backgrounds */
+.gradient-bg {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-color-lighten) 100%);
+}
+
+.statistics-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.statistics-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://img.freepik.com/free-vector/abstract-background-with-squares_23-2148995948.jpg');
+  background-size: cover;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.statistics-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Animaciones personalizadas */
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Estilos para elementos de texto */
+.text-gradient {
+  background: linear-gradient(to right, var(--primary-color), var(--primary-600));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Mejoras para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .hero-section {
+    min-height: 70vh;
+  }
+}
