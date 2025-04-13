@@ -7,6 +7,7 @@ import { Card } from "primereact/card";
 import { Image } from "primereact/image";
 import { Button } from "primereact/button";
 import { Link } from "react-router-dom";
+import CountUp from "react-countup"; // Importamos CountUp
 
 const LandingPage = () => {
   // Inicializar AOS cuando el componente se monta
@@ -157,26 +158,34 @@ const LandingPage = () => {
         <div className="container">
           <div className="grid">
             <div className="col-12 md:col-3 text-center" data-aos="zoom-in" data-aos-delay="100">
-              <div className="text-white hover-grow">
-                <h2 className="text-5xl font-bold mb-2">15K+</h2>
-                <p className="text-white-alpha-70 m-0">Inversores activos</p>
+              <div className="hover-grow">
+                <h2 className="text-5xl font-bold mb-2">
+                  <CountUp end={15} suffix="K+" duration={2.5} enableScrollSpy scrollSpyDelay={0} />
+                </h2>
+                <p className="m-0">Inversores activos</p>
               </div>
             </div>
             <div className="col-12 md:col-3 text-center" data-aos="zoom-in" data-aos-delay="200">
-              <div className="text-white hover-grow">
-                <h2 className="text-5xl font-bold mb-2">$250M</h2>
+              <div className="hover-grow">
+                <h2 className="text-5xl font-bold mb-2 text-gray-600">
+                  $<CountUp end={250} suffix="M" duration={2.5} enableScrollSpy scrollSpyDelay={0} />
+                </h2>
                 <p className="text-white-alpha-70 m-0">Activos gestionados</p>
               </div>
             </div>
             <div className="col-12 md:col-3 text-center" data-aos="zoom-in" data-aos-delay="300">
-              <div className="text-white hover-grow">
-                <h2 className="text-5xl font-bold mb-2">18%</h2>
+              <div className="hover-grow">
+                <h2 className="text-5xl font-bold mb-2 text-gray-600">
+                  <CountUp end={18} suffix="%" duration={2.5} enableScrollSpy scrollSpyDelay={0} />
+                </h2>
                 <p className="text-white-alpha-70 m-0">Rendimiento anual medio</p>
               </div>
             </div>
             <div className="col-12 md:col-3 text-center" data-aos="zoom-in" data-aos-delay="400">
-              <div className="text-white hover-grow">
-                <h2 className="text-5xl font-bold mb-2">24/7</h2>
+              <div className="hover-grow">
+                <h2 className="text-5xl font-bold mb-2 text-gray-600">
+                  <CountUp end={24} suffix="/7" duration={2.5} enableScrollSpy scrollSpyDelay={0} />
+                </h2>
                 <p className="text-white-alpha-70 m-0">Soporte disponible</p>
               </div>
             </div>
